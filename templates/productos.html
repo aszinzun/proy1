@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%block contenido%}
+<h1>productos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">actualizar</th>
+            <th scope="col">eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%set cont=0%}
+        {%for producto in productos %}
+        {%set cont=cont + 1 %}
+        <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{producto}}</td>
+            <td><a href="/editarProd/{{loop.index}}">actualizar</a></td>
+            <td><a href="/eliminarProd/{{loop.index}}">eliminar</a></td>
+        </tr>
+        
+        
+        {% endfor %}
+    </tbody>
+</table>
+<ul>
+    <li><a href="/registrarProd"> registrar otro producto</a></li>
+    <li><a href="/menu"> regresar al menu de principal</a></li>
+</ul>
+{%endblock%}

@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block contenido%}
+    <h1>Registrando producto</h1>
+    <form action="/registrarProd" method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">nombre del nuevo nombre </label>
+            <input type="text" class="form-control" id="nombreProd" 
+                placeholder="nombre" name="nombreProd">
+            
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{%endblock%}

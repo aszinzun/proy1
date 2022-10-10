@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block contenido%}
+    <h1>Eliminando producto</h1>
+    <form action="./{{idProd}}" method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">nombre del producto</label>
+            <input type="text" class="form-control" id="nombreProd" 
+                value="{{producto}}" name="nombreProd" readonly>
+            
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Confirmar borrado</button>
+    </form>
+{%endblock%}

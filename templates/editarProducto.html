@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block contenido%}
+    <h1>Editando producto</h1>
+    <form action="./{{idProd}}" method="POST">
+        <div class="form-group">
+            <label for="exampleInputEmail1">nuevo nombre </label>
+            <input type="text" class="form-control" id="nombreProd" 
+                value="{{producto}}" name="nombreProd">
+            
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{%endblock%}
